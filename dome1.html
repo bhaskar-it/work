@@ -1,0 +1,300 @@
+ <h1>change the html content</h1>
+<h2 id="hcontent">hello world</h2>
+<h3>wellcome to js</h3>
+<button type="button" onclick='document.getElementById("hcontent").innerHTML="hello bhaskar"'>bhaskar</button>
+<button type="button" onclick='document.getElementById("hcontent").innerHTML="hello punith"'>punith</button>
+<br>
+<img id="image" src="C:\Users\kbhas\OneDrive\Pictures\phot.jpg" width="100" height="100">
+<button type="button" onclick='document.getElementById("image").src="C:\Users\kbhas\OneDrive\Pictures\sing.jpg"'>punith</button>
+<button type="button" onclick='document.getElementById("image").src="C:\Users\kbhas\OneDrive\Pictures\adha.jpg"'>adhdar</button>
+<br>
+<br>
+<h1>change in css</h1>
+<h2 id="text">Its bhaskar k</h2>
+<button type="button" onclick='document.getElementById("text").style.color="yellow"'>yellow</button>
+<button type="button" onclick='document.getElementById("text").style.color="red"'>red</button>
+<h1>hide and display content</h1>
+<h2 id="h">this will demonstracte  the getting hide</h2>
+<button type="button" onclick='document.getElementById("h").style.display="none"'>hide</button>
+<button type="button" onclick='document.getElementById("h").style.display="block"'>display</button>
+<br>
+<br>
+____________________________________________________________________
+-: were to write the java script :-
+|
+head tag
+|
+body tag
+|
+extention file --> extenstion .js -->link
+we need to use the tag called 
+1>.In head block:-
+  <head>
+    <script>
+           //body
+    </script>
+  </head>........
+ CODE:-
+ <html>
+<head>
+<script>
+function display()
+ {
+  document.getElementById("display").innerHTML="SCRIPT INCLUDEED IN               THE HEAD TAG"
+ }
+</script>
+</head>
+<body>
+<h1 id="display"> demo  of javascript</h1>
+<button type="button" onclick="display()">click me</button>
+</body>
+</html>
+====================================
+2>.In the body tag:-
+  <body>
+   <script>
+     //body
+   </script>
+  </body>...
+ CODE:
+  <html>
+<head>
+<script>
+function display()
+ {
+  document.getElementById("display").innerHTML="SCRIPT INCLUDEED IN               THE HEAD TAG"
+ }
+</script>
+</head>
+<body>
+<script>
+function display()
+ {
+  document.getElementById("display").innerHTML="SCRIPT INCLUDEED IN  THE BODY TAG"
+ }
+</script>
+
+<h1 id="display"> demo  of javascript</h1>
+<button type="button" onclick="display()">click me</button>
+</body>
+</html>
+
+/////
+if we need to use the externally in notepad of js in html:
+   *.create a file with .js extenstion and follow below syntax:
+    <body>
+     <script src="fail_name">
+       //body will excute the java script language here
+     </script>
+   </body>
+===============================================================
+OUTPUT IN JS:
+  *..innerHTML:-Based on the id content it will be displayed.
+  *. document.write("text")--ID not needed
+  *.window.alert("text")--alert will be displayed when we will excuted that 
+  *.console.log("text")--used to debugging only we nned press the f12 to get on to the console..
+  *.print()---print option to the program..
+-------------------------------------------------------------------------------------
+IDENTIFIERS:-
+ *.It will identifies the memory 
+ *.examples is variables,constants,function_name.
+ *.common rules like all language for declearing variable_name.
+VARIABLES:-
+ *.keyword var
+ *.syntax:
+    var variable_name=value;
+     var a=10;
+    CODE:------
+     <body>
+<script>
+function add()
+{
+ var a,b,c;
+ a=10;
+ b=20;
+ c=30;
+ var d=a+b+c;
+window.alert("Sum od three numbers is:",d)
+}
+</script>
+<button type="button" onclick="add()">ADD</button>
+</body>
+-----------------------------------------------------------------------------------
+DATATYPES:
+  VAR A=0;-----number
+  var a="bhasar";----string
+ types :
+  1>.numbers----all like integers,floating values,long...
+  2>.string----with single or double quote
+  3>.boolean
+  4>.object------arrays,nave:values,null
+  5>.ndifined-----its decleared not intilized
+
+*.to find the type of data 
+  1>.typeof variable;
+--------------------------------------------------------------------------------------
+FUNCTIONS IN JS:
+ *.they need to decleared with keyword called functin
+ *.syntax:  
+     function function_name(){//body}  
+ ITS same like other languages.
+--------------------------------------------------------------------------------------
+CONDITION STATEMENTS:-
+   *.all if,else,else if ladder.....
+  FOR IF ELES BLOCK:
+   <script>
+function age()
+{
+ if(document.getElementById("t").value>=18)
+ {
+   window.alert("YOU CAN VOTE....");
+ }
+ else
+ {
+  window.alert("YOU CAN NOT VOTE!!");
+ }
+}
+</script>
+<body>
+<h1>Enter the age:<input type="text" id="t"></h1>
+<button type="button" onclick="age()">CHECK</button>
+</body>
+--------------------------------------------------------------------------------------
+ SWITCH CASE:
+ EXAMPLE:
+   <script>
+function pg()
+{
+document.getElementById("perc").value=(document.getElementById("om").value/document.getElementById("mm").value)*100
+var percentage=document.getElementById("perc").value
+var g;
+switch(Math.floor(percentage/10))
+{
+ case 9:
+ case 8:g="outstanding";
+        break;
+ case 7:g="Distincation";
+        break;
+ case 6:g="good";
+        break;
+ case 5:g="avareage";
+        break;
+ case 4:g="pass";
+        break;
+ default:g="fail";
+        break;
+}
+document.getElementById("grade").value=g;
+}
+</script>
+</head>
+<body>
+<h1>PERCENTAGE & GRADE CALCULATION</H1>
+Max marks:<input type="text" id="mm"><br><br>
+Obtained marks:<input type="text" id="om"><br><br>
+<button type="button" onclick="pg()">SUBMIT</button><br>
+Percentage:<input type="text" id="perc"><br><br>
+Grade:<input type="text" id="grade">
+</body>
+----------------------------------------------------------------
+ITERATIVE STATEMENTS:-
+*.its like for loop and while loops in other languages.
+CODE:
+ <body>
+<h1>N Numbers:-</h1>
+<h2 id="res"></h2>
+<script>
+var i;res=" "
+for(i=0;i<=100;i++)
+{
+  res+=i+" "
+}
+document.getElementById("res").innerHTML=res;
+</script>
+</body>
+------------------------------------------------------------------------
+NUMBER OBJECTS:
+ *.We can create a object by the keyword called new.
+ *.syntax:
+    var x=new Number(10)--->typeof is Number
+ *.var y=10
+ *.x==y--->this will give the true which will comapre the value but not the type.
+ *.x===y--->this will return the value called Fales which will compare the type of data.
+ *.object should not be capmared.
+ *.toString()-->converts to string data type 
+   exapmle: var x=10
+               x.to string(2)--->1010--binary form
+ *.toExponentional(val)
+ *.toFixed()-->spcified number of decimales will be return.
+    if a=4.45678
+     a.toFixed(2)--> it will return the 4.46 only
+ *.toPrecision(val)--> no of digites need to be considered.
+    if a=4.345674
+     a.toPrecision(4)-->only 4 digites will be consider.
+*******************************************************************************
+NUMBER PROPERITIES:
+ 1>.MIN_VALUE-->minimum value will be return
+ 2>.MAX_VALUE-->maximum value
+ 3>.POSITIVE_INFINITY-->INFINITY
+ 4>.NEGATIVE_INFINITY--> "-" infinity
+ 5>.NaN---> Not a Number
+-------------------------------------------------------------------------------------------
+STRINGS STRING OBJECT:-
+ 1>.strings methods:-
+   a>.indexOf()-->str.indexOf("value")-->return the index value first accurance.
+   b>.lastIndexOf()-->str.lastIndexOf(val>-->return index of last accarence.
+   c>.search()-->str.search(val) return the index of that value
+   d>.Slice()-->str.slice(val1,val2)
+    ......other methode of java only...
+..........................................................................................
+ARRAY:-
+ METHODS:
+ 1.join():-arugument_name.join("delimiter")
+ 2.sort():-array_name.sort()
+ 3.reverse():-array_name.reverse()
+ 4.push():-array_name.push(element)-insert at last postion.
+ 5.pop():-array_name.pop()-deleted at the last postion and return the deleted element.
+ 6.shift():-array_name.shift()-delete  at first.
+ 7.unshift():-array_name.unshift(element)-insert at first.
+ 8.concat():-array_name1.concat(array2,array3,...)-to add array are element.
+ 9.splice():-array.splice(index,no_of_deletion,elements)
+-------------------------------------------------------------------------------------------
+MATH OBJECTE:-
+ properties:-
+ Math.E:-euler's number
+ Math.PI:-pi value
+ Math.SQURT2:-2^
+ Math.SQURT1_2:-1/2^
+ Math.LN2:-log2
+ Math.LN10:-log10
+ Math.Le2E:-log(e)2
+ Math.Ln10E:-log(e)10
+METHODS:
+ 1.abs()-Math.abs(-x)-x
+ 2.cbrt-Math.cbrt(X)-cube root of x
+ 3.ceil()-Math.ceil(4.56)-round up to 5
+ 4.pow()-Math.pow(x)
+ 5.min()-Math.min(v1,v2,v3,v4,v5....)
+ 6.max()-Math.max(v1,v2,v3,v4,,,,,,)
+ 7.random()-Math.random()-betweeen 0 &1
+ 8.round()-Math()
+.........................................complete..........................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
